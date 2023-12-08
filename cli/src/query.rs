@@ -81,23 +81,16 @@ pub fn query_files_at_paths(
                     let start = capture.node.start_position();
                     let end = capture.node.end_position();
                     let capture_name = &query.capture_names()[capture.index as usize];
-                    if !quiet {
-                        if end.row == start.row {
-                            writeln!(
-                                &mut stdout,
-                                "    capture: {} - {}, start: {}, end: {}, text: `{}`",
-                                capture.index,
-                                capture_name,
-                                start,
-                                end,
-                                capture.node.utf8_text(&source_code).unwrap_or("")
-                            )?;
-                        } else {
-                            writeln!(
-                                &mut stdout,
-                                "    capture: {}, start: {}, end: {}",
-                                capture_name, start, end,
-                            )?;
+                    if !quiet {                        
+                        writeln!(
+                            &mut stdout,
+                            "    capture: {} - {}, start: {}, end: {}, text: `{}`",
+                            capture.index,
+                            capture_name,
+                            start,
+                            end,
+                            capture.node.utf8_text(&source_code).unwrap_or("")
+                        )?;
                         }
                     }
                     results.push(query_testing::CaptureInfo {
