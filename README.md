@@ -19,3 +19,59 @@ Tree-sitter is a parser generator tool and an incremental parsing library. It ca
 - [Rust binding](lib/binding_rust/README.md)
 - [WASM binding](lib/binding_web/README.md)
 - [Command-line interface](cli/README.md)
+
+## 변경점
+- start line과 end line이 달라도 텍스트가 출력되도록 수정
+
+## 빌드 방법
+
+0. 사전 준비(Rust 설치)
+<pre>
+<code>
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+cargo --version
+</code>
+</pre>
+
+1. git clone
+<pre>
+<code>
+git clone https://github.com/leebs0521/tree-sitter.git
+cd tree-sitter
+</code>
+</pre>
+
+2. Build the Rust libraies and CLI:
+<pre>
+<code>
+cargo build --release
+</code>
+</pre>
+
+3. Tree-sitter 위치
+<pre>
+<code>
+tree-sitter/target/release/tree-sitter
+</code>
+</pre>
+
+4. Tree-sitter 초기 설정
+<pre>
+<code>
+cd tree-sitter/target/release
+./tree-sitter init-config
+head -n 6 ~/.config/tree-sitter/config.json
+</code>
+</pre>
+
+아래 디렉토리에 생성 후 언어별 tree-sitter parser 레포지토리 클론
+<pre>
+<code>
+{
+  "parser-directories": [
+    "/your_home_directory/github",
+    "/your_home_directory/src",
+    "/your_home_directory/source"
+  ],
+</code>
+</pre>
