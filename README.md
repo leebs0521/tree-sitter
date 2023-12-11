@@ -73,5 +73,14 @@ head -n 6 ~/.config/tree-sitter/config.json
     "/your_home_directory/src",
     "/your_home_directory/source"
   ],
+  ...
+}
 </code>
 </pre>
+
+## tree-sitter parser
+1. [c](https://github.com/tree-sitter/tree-sitter-c)
+2. [cpp](https://github.com/tree-sitter/tree-sitter-cpp)
+3. [go](https://github.com/tree-sitter/tree-sitter-go)
+4. [objective-c](https://github.com/amaanq/tree-sitter-objc)
+5. [swift](https://github.com/syrose01/tree-sitter-swift)
