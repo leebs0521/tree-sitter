@@ -91,7 +91,7 @@ pub fn query_files_at_paths(
                             end,
                             capture.node.utf8_text(&source_code).unwrap_or("")
                         )?;
-                        }
+        
                     }
                     results.push(query_testing::CaptureInfo {
                         name: capture_name.to_string(),
