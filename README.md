@@ -1,6 +1,6 @@
 # tree-sitter
 
-## tree-sitter 20.0.8 버전 기반
+## tree-sitter 0.20.8 버전 기반
 
 [![CICD badge]][CICD]
 [![DOI](https://zenodo.org/badge/14164618.svg)](https://zenodo.org/badge/latestdoi/14164618)
