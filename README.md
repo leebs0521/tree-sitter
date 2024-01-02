@@ -1,5 +1,7 @@
 # tree-sitter
 
+## tree-sitter 20.0.8 버전 기반
+
 [![CICD badge]][CICD]
 [![DOI](https://zenodo.org/badge/14164618.svg)](https://zenodo.org/badge/latestdoi/14164618)
 
@@ -21,8 +23,8 @@ Tree-sitter is a parser generator tool and an incremental parsing library. It ca
 - [Command-line interface](cli/README.md)
 
 ## 변경점
-- start line과 end line이 달라도 텍스트가 출력되도록 수정
-
+- 일부 소스 코드 수정(start line과 end line이 달라도 텍스트가 출력되도록)
+- 변경 부분 [[link]](https://github.com/tree-sitter/tree-sitter/compare/master...leebs0521:tree-sitter:master#diff-518c48ee9177a60a58a06a7e24beeffad37f9a1c109c85fac295e63754ff6e86)
 ## 빌드 방법
 
 0. 사전 준비(Rust 설치)
@@ -64,7 +66,8 @@ head -n 6 ~/.config/tree-sitter/config.json
 </code>
 </pre>
 
-아래 디렉토리에 생성 후 언어별 tree-sitter parser 레포지토리 클론
+아래 디렉토리에 생성 후 아래의 언어별 tree-sitter parser 레포지토리 클론
+c, cpp, go, objective-c, swift
 <pre>
 <code>
 {
@@ -78,9 +81,14 @@ head -n 6 ~/.config/tree-sitter/config.json
 </code>
 </pre>
 
-## tree-sitter parser
-1. [c](https://github.com/tree-sitter/tree-sitter-c)
-2. [cpp](https://github.com/tree-sitter/tree-sitter-cpp)
-3. [go](https://github.com/tree-sitter/tree-sitter-go)
-4. [objective-c](https://github.com/amaanq/tree-sitter-objc)
-5. [swift](https://github.com/syrose01/tree-sitter-swift)
+## tree-sitter 언어 별 parser
+```shell
+  mkdir /your_home_directory/source
+  cd /your_home_directory/source
+  git clone {언어별(c, cpp, go, objective-c, swift) 파서 레포지토리}
+```
+1. [c parser](https://github.com/tree-sitter/tree-sitter-c)
+2. [cpp parser](https://github.com/tree-sitter/tree-sitter-cpp)
+3. [go parser](https://github.com/tree-sitter/tree-sitter-go)
+4. [objective-c parser](https://github.com/amaanq/tree-sitter-objc)
+5. [swift parser](https://github.com/syrose01/tree-sitter-swift)
